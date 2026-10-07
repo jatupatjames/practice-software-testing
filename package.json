@@ -1,0 +1,22 @@
+{
+  "name": "practice-software-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jatupatjames/practice-software-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jatupatjames/practice-software-testing/issues"
+  },
+  "homepage": "https://github.com/jatupatjames/practice-software-testing#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4"
+  }
+}
