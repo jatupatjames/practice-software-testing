@@ -38,10 +38,14 @@ test('has title', async ({ page }) => {
 
 // Step 2: Verify Sign In
     // Tab:Continue as Guest กรอกข้อมูล Email address, First name, Last name
-    await page.getByLabel('Email address *').fill('test@test.com');
-    await page.getByLabel('First name *').fill('test');
-    await page.getByLabel('Last name *').fill('test');
+    await page.getByRole('tab', { name: 'Continue as Guest' }).click();
+    await page.locator('[data-test="guest-email"]').fill('test@gmail.com');
+    await page.locator('[data-test="guest-first-name"]').fill('test');
+    await page.locator('[data-test="guest-last-name"]').fill('test');
     // Click Continue as Guest
     await page.getByRole('button', { name: 'Continue as Guest' }).click();
     await page.getByRole('button', { name: 'Proceed to checkout' }).click();
+//Step 3: Billing Address
+    await page.getByRole('combobox').selectOption({ label: 'Thailand' });
+    await expect(page.getByRole('combobox')).toHaveValue('TH');
 });
